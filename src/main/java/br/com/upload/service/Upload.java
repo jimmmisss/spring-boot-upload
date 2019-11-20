@@ -22,11 +22,9 @@ public class Upload {
     private void salvarArquivo(MultipartFile file) {
 
         try {
-
             byte[] bytes = file.getBytes();
             Path path = Paths.get(this.destino + file.getOriginalFilename());
             Files.write(path, bytes);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
